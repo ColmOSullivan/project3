@@ -1,12 +1,61 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
+import axios from "axios";
+import DisplayGame from './DisplayGame';
+
 
 function GenreForm(props){
+    
+const [allGames, setAllGames] = useState([]);
+const [filteredGames, setFilteredGames] = useState([])
 
-    const [userChoice, setUserChoice] = useState('placeholder')
+console.log(filteredGames)
+
+
+/* getGame hook is making a copy of allGames, generating one random number and giving that as an index for filtered games to get one random game.*/ 
+
+
+    const [userChoice, setUserChoice] = useState('mmo')
+
     const handleUserChoice = (e) =>{
         setUserChoice(e.target.value);
     }
+
+    useEffect(() => {
+        const options = {
+            method: 'GET',
+            url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
+            params: {
+                    category: userChoice
+                    },
+            headers: {
+              'X-RapidAPI-Key': '038c7bb3bamshd5a55fd28d83252p1a3bfdjsncb0a0c2ef1d6',
+              'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+            }
+          };
+          axios.request(options)
+            .then( (res) => {
+                const gameArray = res.data;
+                setAllGames(gameArray);
+            })
+        //   axios.request(options)
+        //   .then( (res) => {
+            // const gameArray = res.data;
+            // setAllGames(gameArray);
+            const copyOfAllGames = [...allGames];
+            const randomGame = Math.floor(Math.random() * copyOfAllGames.length)
+            const newFilteredGames = copyOfAllGames[randomGame]
+            setFilteredGames(newFilteredGames)
+    },[userChoice]);
+
+
+
+    /**/ 
+
+    // const getGame = () =>{
+        
+    //   }
     return(
+        <>
         <form onSubmit={(e) => props.getGame(e, userChoice)}>
             <h2>Select a genre/category of game you're interested in:</h2>
             <select 
@@ -14,14 +63,16 @@ function GenreForm(props){
                 id="gamesGenre"
                 onChange={handleUserChoice}
             value={userChoice} >
-                    {/* <option value="placeholder" disabled>Pick one!</option>
+                    <option value="placeholder" disabled>Pick one!</option>
                     <option value="mmorpg">mmorpg</option>
                     <option value="shooter">shooter</option>
-                    <option value="moba">moba</option> */}
+                    <option value="moba">moba</option>
 
                 </select>
             <button type="submit">Show me a game!</button>
         </form>
+        <DisplayGame games = {filteredGames}/>
+        </>
     )
 }
 
