@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.gameCard {
+  background: rebeccapurple;
+  border: 2px solid black;
+  width: 400px;
+  height: auto;
+}
