@@ -1,6 +1,4 @@
 import './App.css';
-import axios from "axios";
-import { useState, useEffect } from 'react';
 import Header from './Header';
 import GenreForm from './GenreForm';
 
@@ -9,36 +7,12 @@ import GenreForm from './GenreForm';
 function App() {
 
 
-  
-
-// useEffect( () => {
-//   const options = {
-//     method: 'GET',
-//     url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
-//     params: {
-//             category: "shooter"
-//             },
-//     headers: {
-//       'X-RapidAPI-Key': '038c7bb3bamshd5a55fd28d83252p1a3bfdjsncb0a0c2ef1d6',
-//       'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-//     }
-//   };
-  
-//   axios.request(options)
-//   .then( (res) => {
-//     const gameArray = res.data;
-//     setAllGames(gameArray);
-//   })
-// },[]);
-  /**useEffect code ends here. We're currently generating a ONE completely random game, no scope for genre/category yet.**/ 
-
   return (
     <div className="App">
       <Header />
       
       <GenreForm />
 
-    
     </div>
   );
 }
