@@ -33,34 +33,33 @@ const getGame = () => {
             setFilteredGames(newFilteredGames)
         })
 }
-
-
     return(
         <>
             <h2>Select a genre/category of game you're interested in:</h2>
+            <div className="optionsContainer">
             <select 
                 name="gamesGenre" 
                 id="gamesGenre"
                 onChange={(e) =>handleUserChoice(e)}
                 value={userChoice} >
                     <option value="placeholder" disabled>Pick one!</option>
-                    <option value="mmorpg">mmorpg</option>
-                    <option value="shooter">shooter</option>
-                    <option value="moba">moba</option>
-                    <option value="strategy">strategy</option>
-                    <option value="racing">racing</option>
-                    <option value="sports">sports</option>
-                    <option value="social">social</option>
-                    <option value="sandbox">sandbox</option>
-                    <option value="open-world">open-world</option>
-                    <option value="survival">survival</option>
-                    <option value="pvp">pvp</option>
-                    <option value="pve">pve</option>
-                    <option value="pixel">pixel</option>
-                    <option value="voxel">voxel</option>
-                    <option value="zombie">zombie</option>
-                    <option value="turn-based">turn-based</option>
-                    <option value="first-person">first-person</option>
+                    <option value="mmorpg">MMORPG</option>
+                    <option value="shooter">Shooter</option>
+                    <option value="moba">MOBA</option>
+                    <option value="strategy">Strategy</option>
+                    <option value="racing">Racing</option>
+                    <option value="sports">Sports</option>
+                    <option value="social">Social</option>
+                    <option value="sandbox">Sandbox</option>
+                    <option value="open-world">Open-World</option>
+                    <option value="survival">Survival</option>
+                    <option value="pvp">PVP</option>
+                    <option value="pve">PVE</option>
+                    <option value="pixel">Pixel</option>
+                    <option value="voxel">Voxel</option>
+                    <option value="zombie">Zombie</option>
+                    <option value="turn-based">Turn-Based</option>
+                    <option value="first-person">First Person</option>
                     <option value="third-Person">third-Person</option>
                     <option value="top-down">top-down</option>
                     <option value="tank">tank</option>
@@ -91,6 +90,7 @@ const getGame = () => {
                     <option value="mmorts">mmorts</option>
                 </select>
                 <button onClick={getGame}>{filteredGames ?"Re-roll" : "Get a game!"}</button>
+            </div>
         <DisplayGame games = {filteredGames}/>
         </>
     )
