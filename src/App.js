@@ -7,16 +7,14 @@ import GenreForm from './GenreForm';
 
 
 function App() {
-
-
   return (
     <div className="App">
       <>
       <Header />
       </>
+      <main>
       <GenreForm />
-
-      
+      </main>
     </div>
   );
 }
