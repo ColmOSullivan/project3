@@ -35,11 +35,13 @@ const getGame = () => {
 }
     return(
         <>
-        <section className='optionsSection flexContainer'>
-        <div className="optionsContainer">
+        <div className="heroText">
+        <h1>Random Free-to-play game</h1>
+        </div>
             <h2>Select a genre/category of game you're interested in:</h2>
             <div className="selctionContainer">
-            <select 
+            <select
+                className='categorySelect' 
                 name="gamesGenre" 
                 id="gamesGenre"
                 onChange={(e) =>handleUserChoice(e)}
@@ -91,10 +93,8 @@ const getGame = () => {
                     <option value="voxel">Voxel</option>
                     <option value="zombie">Zombie</option>
                 </select>
-                <button onClick={getGame}>{filteredGames ?"Re-roll" : "Get a game!"}</button>
+                <button className='rollButton' onClick={getGame}>{filteredGames ?"Re-roll" : "Get a game!"}</button>
             </div>
-        </div>
-        </section>
         <DisplayGame games = {filteredGames}/>
         </>
     )

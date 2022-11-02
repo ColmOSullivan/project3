@@ -6,8 +6,10 @@
 }
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
-/* remove underline from anchor tags */
+
 a {
   text-decoration: none;
 }
@@ -15,22 +17,35 @@ a {
 .flexContainer {
   display: flex;
 }
+.wrapper {
+  max-width: 900px;
+  width: 85%;
+  margin: 0 auto;
+}
 
 /* General body styling */
 .App {
+  flex-direction: column;
+  /* justify-content: space-between; */
+  padding: 10px;
+  background: black;
   height: 100vh;
   text-align: center;
   font-family: "Ubuntu", sans-serif;
   color: whitesmoke;
+  border: 10px groove #0e1c35;
 }
 
 body {
-  background: rgb(49, 49, 49);
-  background: linear-gradient(
-    0deg,
-    rgba(49, 49, 49, 1) 0%,
-    rgba(79, 78, 78, 1) 54%,
-    rgba(58, 58, 58, 1) 100%
+  color: white;
+  font-weight: 100;
+  /* font-family: "Ubuntu", sans-serif; */
+  font-size: 1rem;
+  background: rgb(13, 31, 92);
+  background: radial-gradient(
+    circle,
+    rgb(21, 56, 171) 1%,
+    rgba(7, 9, 43, 1) 100%
   );
 }
 
@@ -39,73 +54,129 @@ body {
   justify-content: center;
   font-size: 1rem;
   letter-spacing: 1px;
-  background: #107c10;
+  border-radius: 10px;
+  /* margin-bottom: 0.3rem; */
+  border: 2px solid rgb(173, 173, 173);
+  background: black;
+  box-shadow: 0 0 0.5rem rgb(30, 210, 237), inset 0 0 0.5rem rgb(30, 210, 237),
+    0 0 3rem rgb(6, 15, 44), inset 0 0 3rem rgb(6, 15, 44),
+    0 0 5rem rgb(6, 15, 44), inset 0 0 5rem rgb(6, 15, 44);
 }
 
 li {
-  padding: 30px;
+  padding: 20px;
 }
 a {
   color: white;
-}
-a:hover {
-  color: yellow;
   transition: 0.5s;
+  text-transform: uppercase;
+  text-shadow: -0.2rem -0.2rem 0.7rem #08f, 0.2rem 0.2rem 0.7rem #08f,
+    0 0 2rem #08f, 0 0 4rem #08f, 0 0 6rem #08f, 0 0 8rem #08f, 0 0 10rem #08f;
+}
+
+.extLink,
+a {
+  transition: all 300ms ease-in-out;
+}
+
+.extLink:hover,
+.extLink:focus {
+  box-shadow: 0px 0px 5px 5px rgb(16, 232, 228, 0.5);
+}
+
+/* a:hover {
+  color: yellow;
+} */
+
+.heroText {
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  border: 2px solid rgb(173, 173, 173);
+  background: black;
+  box-shadow: 0 0 0.5rem rgb(30, 210, 237), inset 0 0 0.5rem rgb(30, 210, 237),
+    0 0 3rem rgb(6, 15, 44), inset 0 0 3rem rgb(6, 15, 44),
+    0 0 5rem rgb(6, 15, 44), inset 0 0 5rem rgb(6, 15, 44);
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-size: clamp(2.5rem, 0.95rem + 0.25vw, 1.25rem);
+  font-size: calc(3rem + 1vw);
+  /* font-weight: 300; */
+  padding: 0.5rem;
+  text-transform: uppercase;
+  text-shadow: -0.2rem -0.2rem 0.7rem #08f, 0.2rem 0.2rem 0.7rem #08f,
+    0 0 2rem #08f, 0 0 4rem #08f, 0 0 6rem #08f, 0 0 8rem #08f, 0 0 10rem #08f;
+}
+
+/* GenreForm component styling begins*/
+
+main {
+  background: black;
+  border-radius: 10px;
+  border: 2px solid rgb(173, 173, 173);
+  box-shadow: 0 0 0.5rem rgb(30, 210, 237), inset 0 0 0.5rem rgb(30, 210, 237),
+    0 0 3rem rgb(6, 15, 44), inset 0 0 3rem rgb(6, 15, 44),
+    0 0 5rem rgb(6, 15, 44), inset 0 0 5rem rgb(6, 15, 44);
+  padding: 3rem 4rem;
 }
 
 h2 {
-  padding: 0.5rem;
   font-size: 1.5rem;
-  font-size: clamp(1.5rem, 0.95rem + 0.25vw, 1.25rem);
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: -0.2rem -0.2rem 0.7rem #08f, 0.2rem 0.2rem 0.7rem #08f,
+    0 0 2rem #08f, 0 0 4rem #08f, 0 0 6rem #08f, 0 0 8rem #08f, 0 0 10rem #08f;
 }
-/* options menu styling begin*/
-select {
-  text-transform: capitalize;
+.categorySelect {
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 5px;
+  border: 1px solid rgb(173, 173, 173);
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  background: rgb(27, 132, 224);
+  box-shadow: 0 0 0.5rem rgb(27, 132, 224), inset 0 0 0.5rem rgb(27, 132, 224),
+    0 0 3rem rgb(17, 44, 133), inset 0 0 3rem rgb(17, 44, 133),
+    0 0 5rem rgb(17, 44, 133), inset 0 0 5rem rgb(17, 44, 133);
+  text-transform: uppercase;
+  transition: all 300ms ease-in-out;
 }
 
-/* options menu styling end */
-.optionsSection {
-  justify-content: center;
-  height: 10vh;
+.categorySelect:hover,
+.categorySelect:focus {
+  box-shadow: 0px 0px 5px 5px rgb(16, 232, 228, 0.5);
 }
-.optionsContainer {
-  flex-direction: column;
-  background: rgb(69, 0, 138);
-  border: 2px ridge black;
-  border-radius: 2px;
-  width: 50%;
+
+.rollButton {
+  /* margin: 0.3rem; */
+  font-weight: bold;
+  padding: 4px 6px;
+  border-radius: 5px;
+  border: 1px solid rgb(173, 173, 173);
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  background: rgb(27, 132, 224);
+  box-shadow: 0 0 0.5rem rgb(27, 132, 224), inset 0 0 0.5rem rgb(27, 132, 224),
+    0 0 3rem rgb(17, 44, 133), inset 0 0 3rem rgb(17, 44, 133),
+    0 0 5rem rgb(17, 44, 133), inset 0 0 5rem rgb(17, 44, 133);
+  text-transform: uppercase;
+  transition: all 300ms ease-in-out;
+}
+
+.rollButton:hover,
+.rollButton:focus {
+  box-shadow: 0px 0px 5px 5px rgb(16, 232, 228, 0.5);
 }
 
 .selctionContainer {
   padding: 1rem 0;
 }
+/* GenreForm component styling ends*/
 
-.contentSection {
-  height: 500px;
-  width: auto;
-  margin: 5rem 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+/* DisplayGame Component begins. */
 
 .cardFont {
   font-family: "Press Start 2P", Calibri, sans-serif;
-}
-
-.gameCardBefore {
-  background: rgb(69, 0, 138);
-  border: 2px solid black;
-  border-radius: 5px;
-  align-items: center;
-  max-width: 200px;
-  height: 250px;
-  transition: 0.5s;
 }
 
 .cardTitleBefore {
@@ -114,18 +185,22 @@ select {
 }
 
 .gameCard {
+  padding: 0.8rem;
   margin: 0 auto;
   background: rgb(69, 0, 138);
-  border: 2px solid black;
-  border-radius: 5px;
-  width: clamp(200px, 40%, 600px);
+  border-radius: 10px;
+  border: 2px solid rgb(69, 0, 138);
+  box-shadow: 0 0 0.5rem rgb(69, 0, 138), inset 0 0 0.5rem rgb(69, 0, 138),
+    0 0 3rem rgb(6, 15, 44), inset 0 0 3rem rgb(6, 15, 44),
+    0 0 5rem rgb(6, 15, 44), inset 0 0 5rem rgb(6, 15, 44);
+  width: clamp(500px, 40%, 600px);
   height: auto;
 }
 
 .cardContent {
-  display: grid;
-  grid-auto-rows: repeat(3, 1fr);
-  grid-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cardTitle {
@@ -134,20 +209,22 @@ select {
 }
 
 .cardImage {
-  width: 100%;
+  width: 100px;
+  width: clamp(100px, 100%, 600px);
   height: auto;
+  overflow: hidden;
 }
 
-.cardBody {
-  padding: 10px;
-  font-size: 0.7em;
+p {
+  padding: 20px 0;
+  font-size: 0.8em;
 }
 
 .linkButton {
   margin: 1rem 0 0 0;
   display: block;
   text-transform: capitalize;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   cursor: pointer;
   color: white;
   padding: 6px 10px;
@@ -155,15 +232,31 @@ select {
   border: 3px ridge #075507;
   box-shadow: 0 4px 0 0 #054d05;
   transition: all 300ms ease-in-out;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 0.5rem 0;
 }
+
+.linkButton:hover,
+.linkButton:focus {
+  box-shadow: 0px 0px 10px 5px rgb(47, 218, 17);
+}
+
+/* DisplayGame Component begins. */
 
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  background: #107c10;
+  text-transform: uppercase;
   height: 50px;
+  font-size: 1.2em;
+  text-shadow: -0.2rem -0.2rem 0.7rem #08f, 0.2rem 0.2rem 0.7rem #08f,
+    0 0 2rem #08f, 0 0 4rem #08f, 0 0 6rem #08f, 0 0 8rem #08f, 0 0 10rem #08f;
+  border-radius: 10px;
+  border: 2px solid rgb(173, 173, 173);
+  background: black;
+  box-shadow: 0 0 0.5rem rgb(30, 210, 237), inset 0 0 0.5rem rgb(30, 210, 237),
+    0 0 3rem rgb(6, 15, 44), inset 0 0 3rem rgb(6, 15, 44),
+    0 0 5rem rgb(6, 15, 44), inset 0 0 5rem rgb(6, 15, 44);
 }

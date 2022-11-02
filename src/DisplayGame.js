@@ -1,4 +1,4 @@
-import Footer from './Footer'
+
 function DisplayGame(props) {
 return(
     <>
@@ -6,8 +6,7 @@ return(
         {!props.games ? 
             <>
                 <section className="contentSection flexContainer">
-                    <h2>Make a selection to display a suggested game.</h2>
-                    <div className="gameCardBefore cardFont flexContainer">
+                    <div className="gameCard Before cardFont flexContainer">
                         <h3 className="cardTitleBefore">Press "Get a game!" to display something. </h3>
                     </div>
                 </section>
@@ -15,7 +14,7 @@ return(
             :
             <>
             <section className="contentSection flexContainer">
-                <h2>Check out this game!</h2>
+                
 
                     <div className="gameCard cardFont " key={props.games.id}>
                         <div className="cardContent">
@@ -23,7 +22,7 @@ return(
                             <img className="cardImage" src={props.games.thumbnail} alt={props.games.title} />
                             <div className="cardBody">
                             <p>{props.games.short_description}</p>
-                            <a className="linkButton" href={props.games.game_url}>Link to game</a>
+                            <a className="linkButton" href={props.games.game_url}>Click to learn more</a>
                             </div>
                         </div>
                     </div>
@@ -31,7 +30,7 @@ return(
             </>
         }
     </section>
-    <Footer />
+    
     </>
 )
 }
