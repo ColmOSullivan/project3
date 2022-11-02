@@ -101,6 +101,7 @@ a {
 
 h1 {
   font-size: calc(3rem + 1vw);
+  margin: 0.1em;
   padding: 0.5rem;
   text-transform: uppercase;
   text-shadow: -0.2rem -0.2rem 0.7rem #08f, 0.2rem 0.2rem 0.7rem #08f,
@@ -116,7 +117,7 @@ main {
   box-shadow: 0 0 0.5rem rgb(30, 210, 237), inset 0 0 0.5rem rgb(30, 210, 237),
     0 0 3rem rgb(6, 15, 44), inset 0 0 3rem rgb(6, 15, 44),
     0 0 5rem rgb(6, 15, 44), inset 0 0 5rem rgb(6, 15, 44);
-  padding: 3rem 4rem;
+  padding: 3rem 2rem;
 }
 
 .subText {
@@ -139,7 +140,8 @@ h2 {
 }
 .categorySelect {
   font-weight: bold;
-  padding: 3px 6px;
+  margin: 0.1rem;
+  padding: 6px 8px;
   border-radius: 5px;
   border: 1px solid rgb(173, 173, 173);
   font-family: "Ubuntu", sans-serif;
@@ -158,9 +160,9 @@ h2 {
 }
 
 .rollButton {
-  /* margin: 0.3rem; */
   font-weight: bold;
-  padding: 4px 6px;
+  margin: 0.1rem;
+  padding: 6px 8px;
   border-radius: 5px;
   border: 1px solid rgb(173, 173, 173);
   font-family: "Ubuntu", sans-serif;
