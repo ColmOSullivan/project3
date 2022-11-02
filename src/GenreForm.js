@@ -5,7 +5,7 @@ import DisplayGame from './DisplayGame';
 
 function GenreForm(){
     
-const [allGames, setAllGames] = useState([]);
+
 const [filteredGames, setFilteredGames] = useState(null)
 const [userChoice, setUserChoice] = useState('mmorpg')
 
@@ -27,8 +27,8 @@ const getGame = () => {
         };
         axios.request(options)
         .then( (res) => {
-            setAllGames(res.data);
-            const randomGame = Math.floor(Math.random() * res.data.length)
+            const gameArray = res.data;
+            const randomGame = Math.floor(Math.random() * gameArray.length)
             const newFilteredGames = res.data[randomGame]
             setFilteredGames(newFilteredGames)
         }).catch(function (error) {
