@@ -31,14 +31,18 @@ const getGame = () => {
             const randomGame = Math.floor(Math.random() * res.data.length)
             const newFilteredGames = res.data[randomGame]
             setFilteredGames(newFilteredGames)
-        })
+        }).catch(function (error) {
+            console.error(error);
+        });
 }
     return(
         <>
         <div className="heroText">
         <h1>Random Free-to-play game</h1>
         </div>
-            <h2>Select a genre/category of game you're interested in:</h2>
+            <div className="subText">
+            <h2>Select a category of game you're interested in:</h2>
+            </div>
             <div className="selctionContainer">
             <select
                 className='categorySelect' 

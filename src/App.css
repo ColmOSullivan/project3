@@ -26,10 +26,9 @@ a {
 /* General body styling */
 .App {
   flex-direction: column;
-  /* justify-content: space-between; */
   padding: 10px;
   background: black;
-  height: 100vh;
+  /* height: 100vh; */
   text-align: center;
   font-family: "Ubuntu", sans-serif;
   color: whitesmoke;
@@ -39,7 +38,6 @@ a {
 body {
   color: white;
   font-weight: 100;
-  /* font-family: "Ubuntu", sans-serif; */
   font-size: 1rem;
   background: rgb(13, 31, 92);
   background: radial-gradient(
@@ -55,7 +53,6 @@ body {
   font-size: 1rem;
   letter-spacing: 1px;
   border-radius: 10px;
-  /* margin-bottom: 0.3rem; */
   border: 2px solid rgb(173, 173, 173);
   background: black;
   box-shadow: 0 0 0.5rem rgb(30, 210, 237), inset 0 0 0.5rem rgb(30, 210, 237),
@@ -81,11 +78,15 @@ a {
 
 .extLink:hover,
 .extLink:focus {
-  box-shadow: 0px 0px 5px 5px rgb(16, 232, 228, 0.5);
+  color: yellow;
+  text-shadow: -0.2rem -0.2rem 0.7rem rgb(179, 236, 21),
+    0.2rem 0.2rem 0.7rem rgb(179, 236, 21), 0 0 2rem rgb(179, 236, 21),
+    0 0 4rem rgb(179, 236, 21), 0 0 6rem rgb(179, 236, 21),
+    0 0 8rem rgb(179, 236, 21), 0 0 10rem rgb(179, 236, 21);
 }
 
 /* a:hover {
-  color: yellow;
+  
 } */
 
 .heroText {
@@ -100,7 +101,6 @@ a {
 
 h1 {
   font-size: calc(3rem + 1vw);
-  /* font-weight: 300; */
   padding: 0.5rem;
   text-transform: uppercase;
   text-shadow: -0.2rem -0.2rem 0.7rem #08f, 0.2rem 0.2rem 0.7rem #08f,
@@ -119,7 +119,17 @@ main {
   padding: 3rem 4rem;
 }
 
+.subText {
+  border-radius: 10px;
+  border: 2px solid rgb(173, 173, 173);
+  background: black;
+  box-shadow: 0 0 0.5rem rgb(30, 210, 237), inset 0 0 0.5rem rgb(30, 210, 237),
+    0 0 3rem rgb(6, 15, 44), inset 0 0 3rem rgb(6, 15, 44),
+    0 0 5rem rgb(6, 15, 44), inset 0 0 5rem rgb(6, 15, 44);
+}
+
 h2 {
+  padding: 0.6rem;
   font-size: 1.5rem;
   font-weight: 100;
   text-align: center;
@@ -193,7 +203,7 @@ h2 {
   box-shadow: 0 0 0.5rem rgb(69, 0, 138), inset 0 0 0.5rem rgb(69, 0, 138),
     0 0 3rem rgb(6, 15, 44), inset 0 0 3rem rgb(6, 15, 44),
     0 0 5rem rgb(6, 15, 44), inset 0 0 5rem rgb(6, 15, 44);
-  width: clamp(500px, 40%, 600px);
+  width: clamp(500px, 75%, 600px);
   height: auto;
 }
 
@@ -213,6 +223,8 @@ h2 {
   width: clamp(100px, 100%, 600px);
   height: auto;
   overflow: hidden;
+  border-radius: 10px;
+  border: 1px groove black;
 }
 
 p {
