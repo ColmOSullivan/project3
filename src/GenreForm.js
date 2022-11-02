@@ -41,7 +41,7 @@ const getGame = () => {
         <h1>Random Free-to-play game</h1>
         </div>
             <div className="subText">
-            <h2>Select a category of game you're interested in:</h2>
+            <h2>Select a category of game you're interested in</h2>
             </div>
             <div className="selctionContainer">
             <select
