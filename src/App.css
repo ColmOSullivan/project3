@@ -22,6 +22,11 @@ a {
   width: 85%;
   margin: 0 auto;
 }
+@media (max-width: 640px) {
+  .wrapper {
+    width: 100%;
+  }
+}
 
 /* General body styling */
 .App {
@@ -85,10 +90,6 @@ a {
     0 0 8rem rgb(179, 236, 21), 0 0 10rem rgb(179, 236, 21);
 }
 
-/* a:hover {
-  
-} */
-
 .heroText {
   border-radius: 10px;
   margin-bottom: 3rem;
@@ -98,6 +99,11 @@ a {
     0 0 3rem rgb(6, 15, 44), inset 0 0 3rem rgb(6, 15, 44),
     0 0 5rem rgb(6, 15, 44), inset 0 0 5rem rgb(6, 15, 44);
 }
+@media (max-width: 450px) {
+  .heroText {
+    margin-bottom: 1.5rem;
+  }
+}
 
 h1 {
   font-size: calc(3rem + 1vw);
@@ -106,6 +112,18 @@ h1 {
   text-transform: uppercase;
   text-shadow: -0.2rem -0.2rem 0.7rem #08f, 0.2rem 0.2rem 0.7rem #08f,
     0 0 2rem #08f, 0 0 4rem #08f, 0 0 6rem #08f, 0 0 8rem #08f, 0 0 10rem #08f;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
 /* GenreForm component styling begins*/
@@ -118,6 +136,12 @@ main {
     0 0 3rem rgb(6, 15, 44), inset 0 0 3rem rgb(6, 15, 44),
     0 0 5rem rgb(6, 15, 44), inset 0 0 5rem rgb(6, 15, 44);
   padding: 3rem 2rem;
+}
+
+@media (max-width: 450px) {
+  main {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .subText {
@@ -138,6 +162,19 @@ h2 {
   text-shadow: -0.2rem -0.2rem 0.7rem #08f, 0.2rem 0.2rem 0.7rem #08f,
     0 0 2rem #08f, 0 0 4rem #08f, 0 0 6rem #08f, 0 0 8rem #08f, 0 0 10rem #08f;
 }
+
+@media (max-width: 640px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+
 .categorySelect {
   font-weight: bold;
   margin: 0.1rem;
@@ -173,6 +210,13 @@ h2 {
     0 0 5rem rgb(17, 44, 133), inset 0 0 5rem rgb(17, 44, 133);
   text-transform: uppercase;
   transition: all 300ms ease-in-out;
+}
+
+@media (max-width: 450px) {
+  .rollButton {
+    margin: 15px;
+    padding: 10px 14px;
+  }
 }
 
 .rollButton:hover,
