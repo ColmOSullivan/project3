@@ -178,7 +178,7 @@ h2 {
 .categorySelect {
   font-weight: bold;
   margin: 0.1rem;
-  padding: 6px 8px;
+  padding: 10px 20px;
   border-radius: 5px;
   border: 1px solid rgb(173, 173, 173);
   font-family: "Ubuntu", sans-serif;
@@ -198,8 +198,8 @@ h2 {
 
 .rollButton {
   font-weight: bold;
-  margin: 0.1rem;
-  padding: 6px 8px;
+  margin: 0.3rem;
+  padding: 10px 30px;
   border-radius: 5px;
   border: 1px solid rgb(173, 173, 173);
   font-family: "Ubuntu", sans-serif;
